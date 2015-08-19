@@ -1,0 +1,3 @@
+[submodule "stress-ng"]
+	path = stress-ng
+	url = git://kernel.ubuntu.com/cking/stress-ng.git
