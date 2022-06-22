@@ -1,3 +1,3 @@
 [submodule "stress-ng"]
 	path = stress-ng
-	url = git://kernel.ubuntu.com/cking/stress-ng.git
+	url = https://github.com/sailfishos-mirror/stress-ng.git
