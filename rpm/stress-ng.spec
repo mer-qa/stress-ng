@@ -4,7 +4,7 @@ Summary:	Tool to load and stress a computer
 Version:	0.10.17
 Release:	1
 License:	GPLv2+
-URL:		http://kernel.ubuntu.com/~cking/stress-ng/
+URL:		https://github.com/mer-qa/stress-ng
 Source0:	%{name}-%{version}.tar.gz
 
 BuildRequires:	libattr-devel
