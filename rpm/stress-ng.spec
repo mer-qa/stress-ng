@@ -1,7 +1,7 @@
 
 Name:		stress-ng
 Summary:	Tool to load and stress a computer
-Version:	0.10.17
+Version:	0.17.03
 Release:	1
 License:	GPLv2+
 URL:		https://github.com/mer-qa/stress-ng
@@ -25,27 +25,23 @@ Requires:       %{name} = %{version}
 This package contains the documentation and examples for stress-ng
 
 %prep
-%setup -q
+%autosetup -n %{name}-%{version}/%{name}
 
 %build
-make -C stress-ng %{?_smp_mflags}
+%make_build
 
 %install
-cd stress-ng
-make install DESTDIR="%{buildroot}"
+%make_install
 
 rm -rf %{buildroot}%{_datadir}/bash-completion
 
-%clean
-rm -rf %{buildroot}
-
 %files
 %defattr(-,root,root,-)
-%license stress-ng/COPYING
+%license COPYING
 %{_bindir}/stress-ng
 
 %files doc
 %defattr(-, root, root)
-%doc stress-ng/README
-%{_mandir}/man1/stress-ng.1*
-%{_datadir}/stress-ng/example-jobs
+%doc README.md
+%{_mandir}/man1/%{name}.1*
+%{_datadir}/%{name}/example-jobs
